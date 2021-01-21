@@ -77,7 +77,7 @@ least_position = (months[store_decrease])
 # print(least_position)
 
 #prints a header for our analysis
-print("                               ")
+print("-------------------------------")
 print("Financial Analysis")
 print("-------------------------------")
 
@@ -88,6 +88,24 @@ change_amount = (str(round(average_change, 2)))
 print(f"Average Change: ${change_amount}")
 print(f"Greatest Increase in Profits: {greatest_position} (${greatest_increase})")
 print(f"Greatest Decrease in Profits: {least_position} (${greatest_decrease})")
+
+#creates a variable to write the new csv file to
+output_file = os.path.join("bank_output.csv")
+
+with open(output_file, 'w') as datafile:
+
+        writer = csv.writer(datafile, delimiter=' ')
+        
+        # writes the financial analysis results above to a new csv file
+        #[3]
+        datafile.write('---------------------------\n')
+        datafile.write('Financial Analysis\n')
+        datafile.write('---------------------------\n')
+        datafile.write(f"Total Months: {total_months}\n")
+        datafile.write(f"Total: ${total_amount}\n")
+        datafile.write(f"Average Change: ${change_amount}\n")
+        datafile.write(f"Greatest Increase in Profits: {greatest_position} (${greatest_increase})\n")
+        datafile.write(f"Greatest Decrease in Profits: {least_position} (${greatest_decrease})\n")
 
      
 
