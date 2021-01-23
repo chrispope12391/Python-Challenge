@@ -1,6 +1,7 @@
 # Python-Challenge
 This repo will focus on the Python skills we have gained in class.
 
+The python code for the assignments themselves will be stored in the "Analysis" folder. There is an Analysis folder for both the "PyBank" and "PyPoll" folders respectively.
 
 
 Siting my sources
